@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset addfieldpath="/administrator/components/com_redmaps/models/fields">
+        <field name="id"  type="text" class="readonly" label="JGLOBAL_FIELD_ID_LABEL"
+            description ="JGLOBAL_FIELD_ID_DESC" size="10" default="0"
+            readonly="true"  />
+
+        <field name="name" type="text" label="COM_REDMAPS_STATESPECIFIC_NAME"
+            description="COM_REDMAPS_STATESPECIFIC_NAME" class="inputbox" size="30"
+            required="true" />
+
+        <field name="state" type="list" label="JSTATUS"
+            description="JFIELD_PUBLISHED_DESC" class="inputbox"
+            filter="intval" size="1" default="1"
+        >
+            <option value="1">
+                JPUBLISHED</option>
+            <option value="0">
+                JUNPUBLISHED</option>
+        </field>
+
+         <field name="statespecific_id" type="statespecific" label="COM_REDMAPS_TITLE_STATESPECIFICS"
+            description="JFIELD_PUBLISHED_DESC" class="inputbox"
+            filter="intval" size="1" default="0" required="true" 
+        >
+            <option value="0">
+                JSELECT</option>
+        </field>
+
+
+        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+
+    </fieldset>
+
+     <fields name="params">
+        <fieldset
+            name="basic">
+
+
+            <field
+                    name="description"
+                    type="textarea"
+                    label="COM_REDMAPS_LOCATION_DESCRIPTION"
+                    description="COM_REDMAPS_LOCATION_DESCRIPTION"
+                    rows="10" cols="40" filter="raw"
+                    />
+
+            <field
+                    name="color"
+                    type="text"
+                    default = "default"
+                    label="COM_REDMAPS_LOCATION_COLOR"
+                    description="COM_REDMAPS_LOCATION_COLOR"
+                    />
+
+            <field
+                    name="url"
+                    type="text"
+                    default = "default"
+                    label="COM_REDMAPS_LOCATION_URL"
+                    description="COM_REDMAPS_LOCATION_URL"
+                    />
+
+            <field
+                    name="size"
+                    type="text"
+                    default = "default"
+                    label="COM_REDMAPS_LOCATION_SIZE"
+                    description="COM_REDMAPS_LOCATION_SIZE"
+                    />
+
+            <field
+                    name="lat"
+                    type="text"
+                    label="COM_REDMAPS_LOCATION_LAT"
+                    description="COM_REDMAPS_LOCATION_LAT"
+                    />
+
+            <field
+                    name="lng"
+                    type="text"
+                    label="COM_REDMAPS_LOCATION_LNG"
+                    description="COM_REDMAPS_LOCATION_LNG"
+                    />
+
+
+        </fieldset>
+    </fields>
+</form>

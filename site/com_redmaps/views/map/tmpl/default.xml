@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="com_redmaps_map" option="com_redmaps_map">
+		<help
+			key = "COM_REDMAPS_MAP"
+		/>
+		<message>
+			<![CDATA[com_redmaps_map_desc]]>
+		</message>
+	</layout>
+
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request" addfieldpath="/administrator/components/com_redmaps/models/fields">
+ 			<field name="mid" type="map" label="COM_REDMAPS_MAP"
+            		description="COM_REDMAPS_MAP" class="inputbox"
+            		filter="intval" size="1" default="" required="true"
+        	>
+            	<option value="">JSELECT</option>
+        	</field>
+
+        	<field name="cid" type="continent" label="COM_REDMAPS_CONTINENT"
+            		description="COM_REDMAPS_CONTINENT" class="inputbox"
+            		filter="intval" size="1" default=""
+        	>
+            	<option value="">JSELECT</option>
+        	</field>
+
+		</fieldset>
+	</fields>
+</metadata>

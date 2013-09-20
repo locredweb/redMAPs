@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+        <field name="id"  type="text" class="readonly" label="JGLOBAL_FIELD_ID_LABEL"
+            description ="JGLOBAL_FIELD_ID_DESC" size="10" default="0"
+            readonly="true"  />
+
+        <field name="name" type="text" label="COM_REDMAPS_MAP_NAME"
+            description="COM_REDMAPS_MAP_NAME" class="inputbox" size="30"
+            required="true" />
+
+        <field name="state" type="list" label="JSTATUS"
+            description="JFIELD_PUBLISHED_DESC" class="inputbox"
+            filter="intval" size="1" default="1"
+        >
+            <option value="1">
+                JPUBLISHED</option>
+            <option value="0">
+                JUNPUBLISHED</option>
+        </field>
+
+
+        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+
+    <fields name="params">
+        <fieldset name="jgeneral"
+            label="COM_REDMAPS_MAP_GENERAL_SETTINGS" >
+
+            <field
+                    name="width"
+                    type="text"
+                    label="COM_REDMAPS_MAP_WIDTH"
+                    description="COM_REDMAPS_MAP_WIDTH"
+                    default = "800"
+                    />
+
+            <field
+                    name="background_color"
+                    type="color"
+                    label="COM_REDMAPS_MAP_BACKGROUND"
+                    description="COM_REDMAPS_MAP_BACKGROUND"
+                    default = "#FFFFFF"
+                    />
+
+            <field name="background_transparent" type="list" label="COM_REDMAPS_MAP_BACKGROUND_TRANSPARENT"
+                    description="COM_REDMAPS_MAP_BACKGROUND_TRANSPARENT" class="inputbox"
+                    filter="intval" size="1" default="0"
+                    >
+                <option value="1">
+                    JYES</option>
+                <option value="0">
+                    JNO</option>
+            </field>
+
+            <field
+                    name="label_color"
+                    type="color"
+                    label="COM_REDMAPS_MAP_LABEL_COLOR"
+                    description="COM_REDMAPS_MAP_LABEL_COLOR"
+                    default = "#d5ddec"
+                    />
+
+            <field
+                    name="border_color"
+                    type="color"
+                    label="COM_REDMAPS_MAP_BORDER_COLOR"
+                    description="COM_REDMAPS_MAP_BORDER_COLOR"
+                    default = "#FFFFFF"
+                    />
+
+            <field name="pop_ups" type="list" label="COM_REDMAPS_MAP_POP_UPS"
+                    description="COM_REDMAPS_MAP_POP_UPS" class="inputbox"
+                    filter="intval" size="1" default="detect"
+                    >
+                <option value="detect">
+                    detect</option>
+                <option value="on_click">
+                    on_click</option>
+                 <option value="on_hover">
+                    on_hover</option>
+
+            </field>
+
+        </fieldset>
+
+        <fieldset name="jcountry"
+            label="COM_REDMAPS_MAP_COUNTRY_SETTINGS" >
+             <field
+                    name="state_description"
+                    type="text"
+                    label="COM_REDMAPS_MAP_STATE_DESCRIPTION"
+                    description="COM_REDMAPS_MAP_STATE_DESCRIPTION"
+                    />
+
+            <field
+                    name="state_color"
+                    type="color"
+                    label="COM_REDMAPS_MAP_STATE_COLOR"
+                    description="COM_REDMAPS_MAP_STATE_COLOR"
+                    default = "#88A4BC"
+                    />
+
+            <field
+                    name="state_hover_color"
+                    type="color"
+                    label="COM_REDMAPS_MAP_STATE_HOVERCOLOR"
+                    description="COM_REDMAPS_MAP_STATE_HOVERCOLOR"
+                    default = "#3B729F"
+                    />
+
+            <field
+                    name="state_url"
+                    type="text"
+                    label="COM_REDMAPS_MAP_STATE_URL"
+                    description="COM_REDMAPS_MAP_STATE_URL"
+                    />
+
+            <field name="all_states_inactive" type="list" label="COM_REDMAPS_MAP_STATES_INACTIVE"
+                     description="COM_REDMAPS_MAP_STATES_INACTIVE" class="inputbox"
+                    filter="intval" size="1" default="0"
+                >
+                <option value="1">
+                    JYES</option>
+                <option value="0">
+                    JNO</option>
+            </field>
+        </fieldset>
+
+        <fieldset name="jlocation"
+            label="COM_REDMAPS_MAP_LOCATION_SETTINGS" >
+
+
+
+            <field
+                    name="location_description"
+                    type="text"
+                    label="COM_REDMAPS_MAP_LOCATION_DESCRIPTION"
+                    description="COM_REDMAPS_MAP_LOCATION_DESCRIPTION"
+                    />
+
+            <field
+                    name="location_color"
+                    type="color"
+                    label="COM_REDMAPS_MAP_LOCATION_COLOR"
+                    description="COM_REDMAPS_MAP_LOCATION_COLOR"
+                    default = "#FF0067"
+                    />
+
+            <field
+                    name="location_opacity"
+                    type="int"
+                    label="COM_REDMAPS_MAP_LOCATION_OPACITY"
+                    description="COM_REDMAPS_MAP_LOCATION_OPACITY"
+                    default = "1"
+                    />
+
+            <field
+                    name="location_url"
+                    type="text"
+                    label="COM_REDMAPS_MAP_LOCATION_URL"
+                    description="COM_REDMAPS_MAP_LOCATION_URL"
+                    />
+
+            <field
+                    name="location_size"
+                    type="int"
+                    label="COM_REDMAPS_MAP_LOCATION_SIZE"
+                    description="COM_REDMAPS_MAP_LOCATION_SIZE"
+                    default = "35"
+                    />
+
+            <field name="location_type" type="list" label="COM_REDMAPS_MAP_LOCATION_TYPE"
+                    description="COM_REDMAPS_MAP_LOCATION_TYPE" class="inputbox"
+                    filter="intval" size="1" default="circle"
+                    >
+                <option value="circle">
+                    circle</option>
+
+            </field>
+
+            <field name="all_locations_inactive" type="list" label="COM_REDMAPS_MAP_LOCATIONS_INACTIVE"
+                     description="COM_REDMAPS_MAP_LOCATIONS_INACTIVE" class="inputbox"
+                    filter="intval" size="1" default="0"
+                >
+                <option value="1">
+                    JYES</option>
+                <option value="0">
+                    JNO</option>
+            </field>
+
+
+
+        </fieldset>
+
+        <fieldset name="jadvanced"
+            label="COM_REDMAPS_MAP_ADVANCED_SETTINGS" >
+
+
+            <field name="url_new_tab" type="list" label="COM_REDMAPS_MAP_URL_NEW_TAB"
+                     description="COM_REDMAPS_MAP_URL_NEW_TAB" class="inputbox"
+                    filter="intval" size="1" default="0"
+                >
+                <option value="1">
+                    JYES</option>
+                <option value="0">
+                    JNO</option>
+            </field>
+
+            <field
+                    name="div"
+                    type="text"
+                    label="COM_REDMAPS_MAP_DIV"
+                    description="COM_REDMAPS_MAP_DIV"
+                    default = "map"
+                    />
+
+            <field
+                    name="arrow_color"
+                    type="color"
+                    label="COM_REDMAPS_MAP_ARROW_COLOR"
+                    description="COM_REDMAPS_MAP_ARROW_COLOR"
+                    default = "#3B729F"
+                    />
+
+            <field
+                    name="arrow_color_border"
+                    type="color"
+                    label="COM_REDMAPS_MAP_ARROW_COLOR_BORDER"
+                    description="COM_REDMAPS_MAP_ARROW_COLOR_BORDER"
+                    default = "#88A4BC"
+                    />
+
+            <field
+                    name="border_size"
+                    type="text"
+                    label="COM_REDMAPS_MAP_BORDER_SIZE"
+                    description="COM_REDMAPS_MAP_BORDER_SIZE"
+                    default = "1.5"
+                    />
+
+             <field
+                    name="popup_color"
+                    type="color"
+                    label="COM_REDMAPS_MAP_POPUP_COLOR"
+                    description="COM_REDMAPS_MAP_POPUP_COLOR"
+                    default = "#FFFFFF"
+                    />
+
+            <field name="popup_shadow" type="list" label="COM_REDMAPS_POPUP_SHADOW"
+                     description="COM_REDMAPS_POPUP_SHADOW" class="inputbox"
+                    filter="intval" size="1" default="1"
+                >
+                <option value="1">
+                    JYES</option>
+                <option value="0">
+                    JNO</option>
+            </field>
+
+            <field
+                    name="popup_opacity"
+                    type="text"
+                    label="COM_REDMAPS_MAP_POPUP_OPACITY"
+                    description="COM_REDMAPS_MAP_POPUP_OPACITY"
+                    default = "0.9"
+                    />
+
+            <field
+                    name="popup_corners"
+                    type="int"
+                    label="COM_REDMAPS_MAP_POPUP_CORNERS"
+                    description="COM_REDMAPS_MAP_POPUP_CORNERS"
+                    default = "5"
+                    />
+
+            <field
+                    name="popup_font"
+                    type="text"
+                    label="COM_REDMAPS_MAP_POPUP_FONTS"
+                    description="COM_REDMAPS_MAP_POPUP_FONTS"
+                    default = "12px/1.5 Verdana, Arial, Helvetica, sans-serif"
+                    />
+
+            <field name="popup_nocss" type="list" label="COM_REDMAPS_POPUP_NOCSS"
+                     description="COM_REDMAPS_POPUP_NOCSS" class="inputbox"
+                    filter="intval" size="1" default="0"
+                >
+                <option value="1">
+                    JYES</option>
+                <option value="0">
+                    JNO</option>
+            </field>
+
+            <field name="initial_zoom" type="list" label="COM_REDMAPS_INITIAL_ZOOM"
+                     description="COM_REDMAPS_INITIAL_ZOOM" class="inputbox"
+                    filter="intval" size="1" default="-1"
+                >
+                <option value="-1">
+                    Zoomed out</option>
+                <option value="0">
+                    Default</option>
+            </field>
+
+            <field name="initial_zoom_solo" type="list" label="COM_REDMAPS_INITIAL_ZOOM_SOLO"
+                     description="COM_REDMAPS_INITIAL_ZOOM_SOLO" class="inputbox"
+                    filter="intval" size="1" default="0"
+                >
+                <option value="1">
+                    JYES</option>
+                <option value="0">
+                    JNO</option>
+            </field>
+
+            <field name="all_states_zoomable" type="list" label="COM_REDMAPS_ALL_STATES_ZOOMABLE"
+                     description="COM_REDMAPS_ALL_STATES_ZOOMABLE" class="inputbox"
+                    filter="intval" size="1" default="0"
+                >
+                <option value="1">
+                    JYES</option>
+                <option value="0">
+                    JNO</option>
+            </field>
+
+            <field name="auto_load" type="list" label="COM_REDMAPS_AUTO_LOAD"
+                     description="COM_REDMAPS_AUTO_LOAD" class="inputbox"
+                    filter="intval" size="1" default="1"
+                >
+                <option value="1">
+                    JYES</option>
+                <option value="0">
+                    JNO</option>
+            </field>
+
+            <field name="zoom" type="list" label="COM_REDMAPS_ZOOM"
+                     description="COM_REDMAPS_ZOOM" class="inputbox"
+                    filter="intval" size="1" default="1"
+                >
+                <option value="1">
+                    JYES</option>
+                <option value="0">
+                    JNO</option>
+            </field>
+
+            <field name="js_hooks" type="list" label="COM_REDMAPS_JS_HOOKS"
+                     description="COM_REDMAPS_JS_HOOKS" class="inputbox"
+                    filter="intval" size="1" default="0"
+                >
+                <option value="1">
+                    JYES</option>
+                <option value="0">
+                    JNO</option>
+            </field>
+
+            <field name="hide_labels" type="list" label="COM_REDMAPS_HIDE_LABELS"
+                     description="COM_REDMAPS_HIDE_LABELS" class="inputbox"
+                    filter="intval" size="1" default="0"
+                >
+                <option value="1">
+                    JYES</option>
+                <option value="0">
+                    JNO</option>
+            </field>
+
+        </fieldset>
+
+        <fieldset name="choose_country"
+            label="COM_REDMAPS_MAP_SELECT_COUNTRIES" >
+            <field name="states" type="statespecific" label="COM_REDMAPS_MAP_STATES"
+                     description="COM_REDMAPS_MAP_STATES" class="inputbox"
+                    size="40" multiple="true"
+                >
+            </field>
+        </fieldset>
+
+    </fields>
+
+</form>

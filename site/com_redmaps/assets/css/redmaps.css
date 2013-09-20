@@ -1,0 +1,61 @@
+.controlmap
+{
+	background-image: -ms-linear-gradient(top right, #88a4bc 0%, #3b729f 100%);	
+	background-image: -moz-linear-gradient(top right, #88a4bc 0%, #3b729f 100%);	
+	background-image: -o-linear-gradient(top right, #88a4bc 0%, #3b729f 100%);	
+	background-image: -webkit-gradient(linear, right top, left bottom, color-stop(0, #88a4bc), color-stop(1, #3b729f));	
+	background-image: -webkit-linear-gradient(top right, #88a4bc 0%, #3b729f 100%);	
+	background-image: linear-gradient(to bottom left, #88a4bc 0%, #3b729f 100%);		
+	min-width: 160px;
+	max-height : 250px;
+    padding: 10px 0 20px;
+    box-shadow: 0 4px 7px #CCCCCC;
+    margin-left: 18px;
+    margin-top: 25px;
+    overflow:auto
+		
+}
+.controlmap ul li
+{
+	list-style-type: none;
+	
+}
+.controlmap ul li a
+{
+	text-decoration: none;
+	color: #fff;
+	font-family: verdana,serif;
+}
+.controlmap ul li a:hover,.controlmap ul li a:focus
+{
+	background: none !important;
+}
+#map #map_outer
+{
+	display: none;
+}
+.controlmap > ul li
+{
+	/*background: url("devide-s.png") no-repeat;*/
+}
+.redmaps
+{
+	box-shadow: 0 1px 5px #DDDDDD;
+    display: table;
+    width: 100%;
+}
+.redmaps .redback
+{
+	margin-left: -1px;
+    margin-top: 10px;
+    position: absolute;
+    z-index: 9999;
+}
+.redmaps .redback a, .redmaps .redback a:hover
+{	
+	background: url("zoom-icons.png") no-repeat transparent !important;
+	display: inline-block;
+    height: 35px;
+    width: 35px;
+    text-indent: -999px;
+}

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset addfieldpath="/administrator/components/com_redmaps/models/fields">
+        <field name="id"  type="text" class="readonly" label="JGLOBAL_FIELD_ID_LABEL"
+            description ="JGLOBAL_FIELD_ID_DESC" size="10" default="0"
+            readonly="true"  />
+
+        <field name="name" type="text" label="COM_REDMAPS_STATESPECIFIC_NAME"
+            description="COM_REDMAPS_STATESPECIFIC_NAME" class="inputbox" size="30"
+            required="true" />
+
+        <field name="state" type="list" label="JSTATUS"
+            description="JFIELD_PUBLISHED_DESC" class="inputbox"
+            filter="intval" size="1" default="1"
+        >
+            <option value="1">
+                JPUBLISHED</option>
+            <option value="0">
+                JUNPUBLISHED</option>
+        </field>
+
+         <field name="parent_id" type="continent" label="COM_REDMAPS_CONTINENTS"
+            description="JFIELD_PUBLISHED_DESC" class="inputbox"
+            filter="intval" size="1" default="0" required="true"
+        >
+            <option value="0">
+                JSELECT</option>
+
+        </field>
+
+
+        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+
+    </fieldset>
+
+     <fields name="params">
+        <fieldset
+            name="basic">
+
+            <field
+                    name="name"
+                    type="text"
+                    label="COM_REDMAPS_STATESPECIFIC_NAME_FULL"
+                    description="COM_REDMAPS_STATESPECIFIC_NAME"
+                    />
+
+            <field
+                    name="description"
+                    type="textarea"
+                    label="COM_REDMAPS_STATESPECIFIC_DESCRIPTION"
+                    description="COM_REDMAPS_STATESPECIFIC_DESCRIPTION"
+                    rows="5" cols="20" filter="raw"
+                    />
+
+            <field
+                    name="color"
+                    type="text"
+                    default = "default"
+                    label="COM_REDMAPS_STATESPECIFIC_COLOR"
+                    description="COM_REDMAPS_STATESPECIFIC_COLOR"
+                    />
+
+            <field
+                    name="hover_color"
+                    type="text"
+                    default = "default"
+                    label="COM_REDMAPS_STATESPECIFIC_HOVERCOLOR"
+                    description="COM_REDMAPS_STATESPECIFIC_HOVERCOLOR"
+                    />
+
+            <field
+                    name="url"
+                    type="text"
+                    default = "default"
+                    label="COM_REDMAPS_STATESPECIFIC_URL"
+                    description="COM_REDMAPS_STATESPECIFIC_URL"
+                    />
+
+            <field name="hide" type="list" label="COM_REDMAPS_STATESPECIFIC_HIDE"
+                    description="COM_REDMAPS_STATESPECIFIC_HIDE" class="inputbox"
+                    filter="intval" size="1" default="1"
+                    >
+                <option value="1">
+                    JYES</option>
+                <option value="0">
+                    JNO</option>
+            </field>
+
+            <field name="hide_label" type="list" label="COM_REDMAPS_STATESPECIFIC_HIDELABEL"
+                    description="COM_REDMAPS_STATESPECIFIC_HIDELABEL" class="inputbox"
+                    filter="intval" size="1" default="1"
+                    >
+                <option value="1">
+                    JYES</option>
+                <option value="0">
+                    JNO</option>
+            </field>
+
+            <field name="zoomable" type="list" label="COM_REDMAPS_STATESPECIFIC_ZOOMABLE"
+                    description="COM_REDMAPS_STATESPECIFIC_ZOOMABLE" class="inputbox"
+                    filter="intval" size="1" default="1"
+                    >
+                <option value="1">
+                    JYES</option>
+                <option value="0">
+                    JNO</option>
+            </field>
+
+
+
+        </fieldset>
+    </fields>
+</form>
